@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assignment 4: Simple Payroll</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><h1>ICT WEB PROJECT</h1><p>Assignment 4: Simple Payroll</p></header>
+<nav><a href="index.html">Home</a><a href="Conversion.html">Conversion</a><a href="IncomeTax.html">Income Tax</a><a href="Looping.html">Looping</a><a href="Payroll.html" class="on">Payroll</a></nav>
+<main>
+<section>
+<h2>Simple payroll</h2>
+<div class="row">
+  <div><label for="pName">Employee name</label><input id="pName" type="text"></div>
+  <div><label for="pDays">Days worked</label><input id="pDays" type="number" min="0" step="any"></div>
+  <div><label for="pRate">Daily rate</label><input id="pRate" type="number" min="0" step="any"></div>
+  <div><label for="pDed">Deduction amount</label><input id="pDed" type="number" min="0" step="any" value="0"></div>
+</div>
+<button class="primary" id="addBtn">Add employee</button>
+<p class="result err" id="payErr"></p>
+<div class="scroll"><table>
+  <thead><tr><th>No.</th><th>Employee name</th><th>Days worked</th><th>Daily rate</th><th>Gross pay</th><th>Deduction amount</th><th>Net pay</th></tr></thead>
+  <tbody id="payBody"></tbody>
+</table></div>
+<h3>Delete an employee</h3>
+<div class="row">
+  <div><label for="delNo">Line number to delete</label><input id="delNo" type="number" min="1" step="1"></div>
+  <div><button class="danger" id="delBtn">Delete line</button></div>
+</div>
+</section>
+</main>
+<script src="scripts.js"></script>
+<script src="payroll.js"></script>
+</body>
+</html>
